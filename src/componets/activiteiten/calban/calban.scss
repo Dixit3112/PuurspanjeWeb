@@ -1,0 +1,118 @@
+@import "../../../scss/global.scss";
+
+.calban{
+    .main-calban{
+        padding: 50px 0;
+        display: grid;
+        gap: 30px;
+        h3{
+            @include font-24;
+        }
+        .img-info{
+            color: var(--font-color);
+            background-color: #000;
+            display: flex;
+            img{
+                height: 403px;
+            }
+            .info-calban{
+                padding: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                h3{
+                    color: var(--font-color)
+                }
+                p{
+                    @include font-16;
+                }
+                .icon{
+                    color: var(--font-color);
+                    font-size: 40px;
+                }
+            }
+        }
+        .img-forest{
+            display: flex;
+            justify-content: space-between;
+            img{
+                width: 560px;
+            }
+            .info-forest{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 60px 20px 60px 100px;
+            }
+            p{
+                @include font-16;
+            }
+            a{
+                color: var(--anchor-font-color);
+                font-weight: 600;
+                text-decoration: none;
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .calban{
+        max-width: 576px;
+        .main-calban{
+            .img-info{
+                flex-direction: column;
+                align-items: center;
+                img{
+                    width: 500px !important;
+                }
+                .info-calban{
+                    width: 350px;
+                    padding: 40px !important;
+                }
+            }
+            .img-forest{
+                max-width: 576px;
+                flex-direction: column;
+                align-items: center;
+                img{
+                    height: 400px !important;
+                }
+                .info-forest{
+                    padding: 50px !important;
+                    p{
+                        max-width: 425px;
+
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .calban{
+        max-width: 768px;
+        .main-calban{
+            .img-info{
+                display: flex;
+                justify-content: center;
+                img{
+                    width: 450px;
+                    height: 400px;
+                }
+                .info-calban{
+                    padding: 25px 5px;
+                    width: 307px;
+                }
+            }
+            .img-forest{
+                img{
+                    width: 430px;
+                    height: 600px;
+                }
+                .info-forest{
+                    padding: 100px 10px 100px 30px;
+                }
+            }
+        }
+    }
+}

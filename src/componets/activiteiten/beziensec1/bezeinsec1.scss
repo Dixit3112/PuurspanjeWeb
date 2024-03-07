@@ -1,0 +1,103 @@
+@import "../../../scss/global.scss";
+
+.bezien-main{
+    padding: 50px 60px;
+    .name-place-cards{
+        display: grid;
+        gap: 30px;
+        h3{
+            padding: 0 0 0 70px;
+        }
+        .place-topic{
+            display: grid;
+            gap: 20px;
+            .place-info{
+                @include flex-jcc;
+                gap: 20px;
+                .cards{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    color: #fff;
+                    background-color: #222;
+                    img{
+                        width: 367px;
+                    }
+                    .tour-info{
+                        padding: 0 40px;
+                        height: 100%;
+                        max-width: 265px;
+                        h3{
+                            color: var(--font-color);
+                            padding: 5px 0;
+                            @include font-16;
+                            font-weight: 600;
+                        }
+                        p{
+                            @include font-16;
+                        }
+                    }
+                    .icons{
+                        padding: 0 40px 40px 40px;
+                        display: grid;
+                        // justify-content: flex-start;
+                        .icon{
+                            font-size: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .bezien-main{
+        padding: 20px;
+        .name-place-cards{
+            max-width: 576px;
+            padding: 10px 15px;
+            h3{
+                padding: 0;
+            }
+            .place-topic{
+                display: flex;
+                flex-direction: row;
+                overflow-x: auto;
+                gap: 20px;
+                .place-info{
+                    gap: 20px;
+                    .cards{
+                        width: 245px;
+                        img{
+                            width: 245px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .bezien-main{
+        max-width: 768px;
+        padding: 30px 5px;
+        .name-place-cards{
+            max-width: 768px;
+            .place-topic{
+                gap: 10px;
+                .place-info{
+                    gap: 5px;
+                    .cards{
+                        width: 245px;
+                        img{
+                            width: 245px;
+                        }
+                        .tour-info{
+                            padding: 0 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

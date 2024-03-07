@@ -1,0 +1,54 @@
+@import "../../../scss/global.scss";
+
+.murcia{
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    .murciaInfo{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        .info{
+            display: grid;
+            gap: 20px;
+            max-width: 754px;
+            h3{
+                @include font-24;
+            }
+        }
+        .more{
+            display: flex;
+            gap: 5px;
+            a{
+                text-decoration: none;
+                color: var(--anchor-font-color);
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .murrcia{
+        .info{
+            padding: 0 30px;
+            display: grid;
+            gap: 15px;
+            max-width: 640px;
+        }
+        .more{
+            padding: 0 30px;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .murcia{
+        .info{
+            padding: 0 30px;
+            display: grid;
+            gap: 15px;
+            max-width: 640px;
+        }
+        .more{
+            padding: 0 30px;
+        }
+    }
+}

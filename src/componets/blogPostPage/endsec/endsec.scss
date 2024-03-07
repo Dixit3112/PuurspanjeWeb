@@ -1,0 +1,151 @@
+@import "../../../scss/global.scss";
+
+.end-cards{
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    .name-place-cards{
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        .main-card-flex{
+            display: flex;
+            gap: 30px;
+            .place-price{
+                display: flex;
+                gap: 20px;
+                height: 300px;
+                .cards{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    max-width: 370px;
+                    padding: 0 0 20px 0;
+                    border-bottom: 1px solid var(--color-border-gray);
+                    img{
+                        width: 370px;
+                    }
+                    h3{
+                        color: var(--color-black);
+                        @include font-20;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .sntr-card{
+                .book-cards{
+                    display: grid;
+                    padding: 30px;
+                    border: 0.5px solid #f5f5f5;
+                    box-shadow: 5px 40px 40px #0000001a;
+                    .info-booking{
+                        display: grid;
+                        gap: 30px;
+                        padding: 20px 0;
+                        margin: 0 0 20px 0;
+                        max-width: 270px;
+                        border-bottom: 1px solid var(--color-border-gray);
+                        .ques{
+                            display: grid;
+                            gap: 20px;
+                            color: #000;
+                            h3{
+                                @include font-20;
+                                font-weight: 600;
+                            }
+                            h6{
+                                @include font-16;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                    .button{
+                        display: flex;
+                        justify-content: center;
+                        .black{
+                            border: none;
+                            width: 270px;
+                            background-color: var(--background-color);
+                            color: #fff;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .end-cards{
+        .name-place-cards{
+            padding: 50px 0;
+            .main-card-flex{
+                display: grid;
+                min-width: 200px;
+                max-width: 576px;
+                .place-price{
+                    width: 100%;
+                    overflow-x: auto;
+                    height: 450px;
+                    max-width: 560px;
+                    .cards{
+                        img{
+                            object-fit: cover;
+                            width: 340px !important;
+                            height: 300px !important;
+                        }
+                        h3{
+                            max-width: 340px;
+                        }
+                    }
+                }
+                .sntr-card{
+                    .book-cards{
+                        padding: 0;
+                        width: 100%;
+                        display: grid;
+                        justify-content: center;
+                        box-shadow: 1px 40px 40px #00000055;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .end-cards{
+        .name-place-cards{
+            padding: 50px 0px;
+            .main-card-flex{
+                max-width: 768px;
+                gap: 10px;
+                .place-price{
+                    gap: 5px;
+                    img{
+                        width: 240px !important;
+                    }
+                    h3{
+                        max-width: 240px;
+                    }
+                }
+                .sntr-card{
+                    .book-cards{
+                        padding: 0;
+                        width: 100%;
+                        display: grid;
+                        justify-content: center;
+                        box-shadow: 1px 40px 40px #00000055;
+                        .info-booking{
+                            max-width: 240px;
+                        }
+                        .button{
+                            .black{
+                                width: 150px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

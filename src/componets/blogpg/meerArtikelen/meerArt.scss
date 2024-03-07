@@ -1,0 +1,142 @@
+@import "../../../scss/global.scss";
+
+.meerArt{
+    padding: 50px 0;
+    h2{
+        @include font-24;
+    }
+    .art-booking{
+        display: flex;
+        gap: 30px;
+        .arts-place{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 760px;
+            .info-art{
+                display: flex;
+                gap: 20px;
+                max-height: 1100px;
+                img{
+                    width: 370px;
+                    height: 250px;
+                }
+                .info-placeArt{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    max-width: 335px;
+                    // padding: 10px;
+                    h3{
+                        @include font-20;
+                    }
+                    .timing-steed {
+                        padding: 20px 0;
+                        border-bottom: 1px solid var(--color-border-gray);
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+        .book-card{
+            padding: 40px;
+            width: 350px;
+            height: 330px;
+            border: 1px solid var(--color-border-gray);
+            box-shadow: 1px 40px 40px var(--shadow-color);
+            .info-card{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                h3{
+                    @include font-20;
+                    font-weight: 600;
+                }
+                h4{
+                    @include font-18;
+                    font-weight: 500;
+                }
+                .button{
+                    padding: 20px;
+                    @include flex-2-center;
+                    border-top: 0.1px solid var(--color-border-gray);
+                    .black{
+                        color: var(--font-color);
+                        background-color: var(--background-color);
+                        width: 310px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .meerArt{
+        max-width: 768px;
+        padding: 10px;
+        .art-booking{
+            gap: 20px;
+            max-width: 768px;
+            .arts-place{
+                max-width: 768px;
+                gap: 10px;
+                .info-art{
+                    img{
+                        width: 200px;
+                    }
+                    .info-placeArt{
+                        gap: 10px;
+                        max-width: 200;
+                        .timing-steed{}
+                    }
+                }
+            }
+        }
+        .book-card{
+            padding: 20px !important;
+            width: 100%;
+            max-width: 200px;
+            height: 100%;
+        }
+    }
+}
+@media (max-width: 576px) {
+    .meerArt{
+        max-width: 576px;
+        .art-booking{
+            max-width: 576px;
+            display: flex;
+            flex-direction: column;
+            .arts-place{
+                max-width: 576px;
+                gap: 10px;
+                .info-art{
+                    width: 85%;
+                    img{
+                        width: 158px !important;
+                        height: 188px;
+                        object-fit: cover;
+                    }
+                    .info-placeArt{
+                        h3{
+                            @include font-16;
+                            font-weight: 500;
+                        }
+                        .timing-steed{
+                            .iconDot{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .book-card{
+            width: 576px;
+            margin: 0 auto;
+        }
+    }
+}

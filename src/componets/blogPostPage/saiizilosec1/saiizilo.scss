@@ -1,0 +1,110 @@
+@import "../../../scss/global.scss";
+
+.info-img{
+    padding: 50px 0;
+    .info-saizilo{
+        margin: 0 auto;
+        display: grid;
+        align-items: center;
+        padding: 50px 23px;
+        width: 800px;
+        p{
+            margin: 5px 0;
+            max-width: 660px;
+            @include font-16;
+
+        }
+    }
+    .center-img{
+        display: grid;
+        justify-content: center;
+        .img-saizilo{
+            width: 100%;
+            display: grid;
+            gap: 17px;
+            max-width: 754px;
+            .first{
+                width: 754px;
+                img{
+                    width: 754px;
+                    height: 300px;
+                }
+            }
+            .imgs{
+                display: flex;
+                gap: 20px;
+                img{
+                    height: 300px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .info-img{
+        padding: 50px 0;
+        .info-saizilo{
+            display: grid;
+            justify-content: center;
+            width: 576px;
+            max-width: 530px;
+            padding: 0;
+            p{
+                max-width: 500px;
+            }
+        }
+        .center-img{
+            padding: 20px 0;
+            max-width: 576px;
+            .img-saizilo{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                overflow-x: scroll;
+                max-width: 550px;
+                .first, .imgs{
+                    img{
+                        object-fit: cover;
+                        width: 300px !important;
+                        height: 200px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .info-img{
+        padding: 50px 0;
+        .info-saizilo{
+            display: grid;
+            justify-content: center;
+            max-width: 768px;
+            padding: 0;
+            p{
+                max-width: 500px;
+            }
+        }
+        .center-img{
+            max-width: 768px;
+            padding: 20px 0;
+            .img-saizilo{
+                .first{
+                    display: flex;
+                    justify-content: center;
+                    img{
+                        width: 703px;
+                        height: 300px;
+                    }
+                }
+                .imgs{
+                    justify-content: center;
+                    img{
+                        width: 341px;
+                        height: 300px;
+                    }
+                }
+            }
+        }
+    }
+}
