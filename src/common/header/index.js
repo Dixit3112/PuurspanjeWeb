@@ -4,10 +4,7 @@ import logo from "../../assets/logo/Group.svg";
 import { useNavigate } from "react-router-dom";
 
 export default function Header() {
-  const navigate = useNavigate;
-  const handleOnClick = () => {
-    navigate("/contact");
-  };
+
   return (
     <>
       <div className="header">
