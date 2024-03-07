@@ -1,0 +1,293 @@
+@import "../../scss/global.scss";
+
+.header {
+    background-color: var(--background-color-gray);
+    .main-flex {
+      padding: 10px 0;
+      @include flex-bet-center;
+    .flex {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .icon {
+        .icon-star {
+          margin: 1px;
+          font-size: 20px;
+          color: var(--icon-background-color);
+        }
+      }
+      p {
+        @include font-16;
+        padding-top: 5px;
+        color: #777;
+      }
+      span {
+        display: block;
+        @include font-16;
+        padding-top: 5px;
+        color: #777;
+      }
+    }
+    .flex-items {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      // justify-content: flex-end;
+      .icon {
+        display: flex;
+        gap: 20px;
+        .icon-tel {
+          font-size: 20px;
+        }
+        p {
+          @include font-16;
+        }
+        &::after {
+          content: "";
+          display: block;
+          min-height: 15px;
+          width: 1px;
+          background-color: var(--color-gray);
+        }
+      }
+      a {
+        text-decoration: none;
+        display: block;
+        @include font-16;
+        color: #777;
+      }
+      a {
+        display: block;
+        @include font-16;
+      }
+    }
+  }
+}
+header {
+  padding: 25px 0;
+  border-bottom: 1px solid #c1c1c8;
+  .flex-header {
+    display: flex;
+    justify-content: space-between;
+    .logo {
+      img {
+        width: 150px;
+      }
+    }
+    .flex-main {
+      display: flex;
+      .header-items {
+        display: flex;
+        gap: 35px;
+        a {
+          display: block;
+          color: var(--header-font-color);
+          text-decoration: none;
+          @include font-16;
+        }
+        a:hover{
+          color: var(--header-menu-color);
+          transition: all .3s linear;
+        }
+        &::after {
+          content: "";
+          display: block;
+          width: 1px;
+          height: 30px;
+          background-color: var(--color-border-gray);
+        }
+      }
+      .items {
+        h2 {
+          padding: 0 35px;
+          a {
+            @include font-20;
+            font-weight: 700;
+            display: block;
+            color: var(--header-font-color);
+            text-decoration: none;
+            @include font-16;
+          }
+          a:hover{
+            color: var(--header-menu-color);
+            transition: all .3s linear;
+          }
+        }
+      }
+      .menu-icon {
+        display: none;
+        .icon-menu {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 40px;
+    background-color: var(--background-color-gray);
+    .main-flex {
+      display: flex;
+      justify-content: space-between;
+      .flex {
+        display: flex;
+        //   justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        .icon {
+          .icon-star {
+            font-size: 16px;
+            color: var(--icon-background-color);
+          }
+        }
+        p {
+          @include font-12;
+          padding-top: 5px;
+          color: var(--color-gray);
+        }
+        span {
+          display: block;
+          @include font-12;
+          padding-top: 5px;
+          color: var(--color-gray);
+        }
+      }
+      .flex-items {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        // justify-content: flex-end;
+        .icon {
+          display: flex;
+          gap: 10px;
+          .icon-tel {
+            font-size: 16px;
+          }
+          p {
+            @include font-12;
+          }
+          &::after {
+            content: "";
+            display: block;
+            min-height: 15px;
+            width: 1px;
+            background-color: var(--color-gray);
+          }
+        }
+        a {
+          display: block;
+          @include font-12;
+        }
+        a {
+          display: block;
+          @include font-12;
+        }
+      }
+    }
+  }
+  header {
+    padding: 15px 70px;
+    .flex-header {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      justify-content: space-between;
+      .logo {
+        img {
+          width: 150px;
+        }
+      }
+      .flex-main {
+        display: flex;
+        .header-items {
+          display: flex;
+          gap: 35px;
+          a {
+            display: block;
+            color: var(--font-black-color);
+            text-decoration: none;
+            @include font-12;
+          }
+          &::after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 25px;
+            background-color: #000;
+          }
+        }
+        .items {
+          h2 {
+            padding: 0 35px;
+            @include font-12;
+            font-weight: 600;
+          }
+        }
+        .menu-icon {
+          display: none;
+          .icon-menu {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .header {
+    display: none;
+  }
+  header {
+    padding: 25px 0px;
+    .flex-header {
+      display: flex;
+      padding: 0px 10px;
+      // justify-content: space-evenly;
+      .logo {
+        img {
+          width: 150px;
+          padding-top: 10px;
+        }
+      }
+      .flex-main {
+        display: flex;
+        // gap: 35px;
+        .header-items {
+          display: none;
+          // display: flex;
+          // gap: 35px;
+          a {
+            display: block;
+            color: var(--color-gray);
+            text-decoration: none;
+            @include font-16;
+          }
+          &::after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 25px;
+            background-color: #000;
+          }
+        }
+        .items {
+          display: none;
+          h2 {
+            padding: 0 35px;
+            @include font-16;
+            font-weight: 600;
+          }
+        }
+        .menu-icon {
+          display: block;
+          .icon-menu {
+            font-size: 30px;
+            color: #000;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}

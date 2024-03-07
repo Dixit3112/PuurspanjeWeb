@@ -1,0 +1,24 @@
+@mixin flex-2-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-bet-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin grid-col-4{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    align-items: center;
+}
+@mixin flex-jcc{
+    display: flex;
+    justify-content: center;
+}
+@mixin flex-aic{
+    display: flex;
+    align-items: center;
+}
