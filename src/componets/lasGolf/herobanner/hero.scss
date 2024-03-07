@@ -1,0 +1,22 @@
+@import "../../../scss/global.scss";
+
+.golfHero{
+    @include flex-2-center;
+    flex-direction: column;
+    padding: 50px 0;
+    .golf-info{
+        padding: 50px 0;
+        .las-golf{
+            @include flex-bet-center;
+            width: 1140px;
+            h1{
+                @include font-48;
+                width: 560px;
+            }
+            p{
+                @include font-18;
+                max-width: 500px;
+            }
+        }
+    }
+}

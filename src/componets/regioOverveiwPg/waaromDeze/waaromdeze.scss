@@ -1,0 +1,183 @@
+@import "../../../scss/global.scss";
+
+.waaromdeze{
+    padding: 50px 0;
+    h2{
+        padding: 0 0 10px 0;
+        @include font-32;
+    }
+    .infoRegio{
+        display: flex;
+        gap: 20px;
+        .info-first{
+            p{
+                @include font-16;
+            }
+        }
+    }
+    .info-img{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 50px 0;
+        .main-card-flex{
+            display: flex;
+            gap: 30px;
+            .place-price{
+                display: flex;
+                gap: 20px;
+                height: 300px;
+                height: 420px;
+                .cards{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .cntr-card{
+                .book-cards{
+                    display: grid;
+                    padding: 30px;
+                    border: 0.5px solid #f5f5f5;
+                    box-shadow: 5px 40px 40px #0000001a;
+                    .info-booking{
+                        display: grid;
+                        gap: 20px;
+                        padding: 20px 0;
+                        margin: 0 0 20px 0;
+                        max-width: 270px;
+                        border-bottom: 1px solid var(--color-border-gray);
+                        .ques{
+                            display: grid;
+                            gap: 20px;
+                            color: #000;
+                            h3{
+                                @include font-20;
+                                font-weight: 600;
+                            }
+                            h6{
+                                @include font-16;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                    .button{
+                        @include flex-2-center;
+                        .black{
+                            border: none;
+                            width: 270px;
+                            background-color: var(--background-color);
+                            color: #fff;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .waaromdeze{
+        padding: 30px 0;
+        .infoRegio{
+            justify-content: center;
+            .info-first{
+                max-width: 250px;
+            }
+        }
+        .info-img{
+            .main-card-flex{
+                max-width: 768px;
+                gap: 10px;
+                height: 400px;
+                .place-price{
+                    gap: 10px;
+                    img{
+                        width: 245px !important;
+                        height: 400px;
+                    }
+                }
+                .cntr-card{
+                    .book-cards{
+                        padding: 0;
+                        width: 250px;
+                        display: grid;
+                        justify-content: center;
+                        box-shadow: 1px 40px 40px #00000055;
+                        .info-booking{
+                            max-width: 240px;
+                        }
+                        .button{
+                            .black{
+                                width: 150px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .waaromdeze{
+        padding: 0;
+        h2{
+            padding: 10px;
+           @include font-24;
+           font-weight: 600;
+        }
+        .infoRegio{
+            display: grid;
+            gap: 10px;
+            .info-first{
+                max-width: 550px;
+            }
+        }
+        .info-img{
+            .main-card-flex{
+                display: flex;
+                max-width: 576px;
+                width: 1280px;
+                gap: 5px;
+                overflow-x: auto;
+                .place-price{
+                    height: 310px;
+                    max-width: 560px;
+                    gap: 10px;
+                    .cards{
+                        img{
+                            width: 340px !important;
+                            height: 300px;
+                        }
+                    }
+                }
+                .cntr-card{
+                    @include flex-2-center;
+                    .book-cards{
+                        margin: 20px 20px 120px 140px;
+                        width: 300px;
+                        height: 300px;
+                        @include flex-2-center;
+                        gap: 5px;
+                        flex-direction: column;
+                        box-shadow: 1px 40px 40px #00000055;
+                        .info-booking{
+                            padding: 0;
+                            gap: 5px;
+                            max-width: 240px;
+                            .ques{
+                                display: grid;
+                                gap: 5px;
+                            }
+                        }
+                        .button{
+                            .black{
+                                width: 150px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

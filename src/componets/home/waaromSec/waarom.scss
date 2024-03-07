@@ -1,0 +1,55 @@
+@import "../../../scss/global.scss";
+
+.waarom-detail{
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    .queWaarom{
+        h3{
+            max-width: 415px;
+            @include font-32;
+        }
+    }
+    .main-info{
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        .info-waarom{
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            .cntry-info{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                p{
+                    width: 400px;
+                }
+            }
+        }
+        @media (max-width: 576px) {
+            min-width: 200px;
+            overflow-x: auto;
+            display: flex;
+            flex-direction: row;
+            h4{
+                @include font-18;
+                font-weight: 600;
+            }
+        }
+        @media (max-width: 768px) {
+            max-width: 768px;
+            .info-waarom{
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                .cntry-info{
+                    p{
+                        width: 230px;
+                    }
+                }
+            }
+        }
+    }
+}

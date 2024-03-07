@@ -1,0 +1,92 @@
+@import "../../../scss/global.scss";
+
+.rustZon{
+    padding: 50px 10px;
+    display: flex;
+    flex-direction: column;
+    h2{
+        @include font-32;
+    }
+    .info-rust{
+        display: flex;
+        gap: 20px;
+        p{
+            @include font-18;
+        }
+    }
+}
+.name-place-cards{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    h2{
+        padding: 10px;
+    }
+    .place-price{
+        @include flex-bet-center;
+        gap: 20px;
+        .cards{
+            display: flex;
+            flex-direction: column;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .rustZon{
+        h2{
+            @include font-32;
+            font-weight: 600;
+        }
+        .info-rust{
+            display: flex;
+            p{
+                max-width: 49%;
+            }
+        }
+    }
+    .name-place-cards{
+            gap: 20px;
+            .place-price{
+                padding: 10px;
+                gap: 5px;
+            }
+    }
+}
+@media (max-width: 576px) {
+    .rustZon{
+        h2{
+            padding: 0 0 10px 0;
+            @include font-20;
+            font-weight: 600;
+        }
+        .info-rust{
+            // display: flex;
+            flex-direction: column;
+            @include font-16;
+        }
+    }
+    .name-place-cards{
+            min-width: 200px;
+            max-width: 576px;
+            h2{
+                @include font-20;
+                font-weight: 600;
+            }
+            .place-price{
+                max-width: 576px;
+                overflow-x: auto;
+                .cards{
+                    h3{
+                        @include font-16;
+                        font-weight: 600;
+                    }
+                    img{
+                        width: 250px;
+                    }
+                }
+            }
+    }
+}

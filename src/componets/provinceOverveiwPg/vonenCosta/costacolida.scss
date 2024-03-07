@@ -1,0 +1,131 @@
+@import "../../../scss/global.scss";
+
+.costaColida{
+    margin: 50px 0;
+    padding: 20px;
+    background-color: var(--background-color);
+    .wonen-costa-main{
+        display: grid;
+        justify-content: center;
+        gap: 60px;
+        color: var(--font-color);
+        h1{
+            color: var(--font-color);
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            @include font-32;
+        }
+        .info-costa{
+            display: flex;
+            gap: 20px;
+            P, span{
+                max-width: 560px;
+            }
+        }
+    }
+    .full-info{
+        padding: 20px;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        color: var(--font-color);
+        .box-costa{
+            width: 365px;
+            display: flex;
+            gap: 20px;
+            .info1{
+                .icon1{
+                    color: var(--font-color);
+                    font-size: 24px;
+                }
+            }
+            .info2 {
+                h4{
+                    @include font-18;
+                    font-weight: 500;
+                    max-width: 230px;
+                    color: var(--font-color);
+                }
+                p{
+                    color: var(--font-color-dark-gray);
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .costaColida{
+        margin: 20px 0;
+            .wonen-costa-main{
+                gap: 30px;
+                .info-costa{
+                    display: flex;
+                    gap: 20px;
+                    p, span{
+                        max-width: 350px;
+                    }
+                }
+            }
+        .full-info{
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 15px;
+            .box-costa{
+                width: 365px;
+                display: flex;
+                gap: 10px;
+                .info2 {
+                    h4{
+                        max-width: 230px;
+                        color: var(--font-color);
+                    }
+                    p{
+                        color: var(--font-color-dark-gray);
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .costaColida{
+        margin: 20px 0;
+        .wonen-costa-main{
+                gap: 30px;
+                .info-costa{
+                    padding: 20px 0;
+                    display: flex;
+                    gap: 20px;
+                    p{
+                        max-width: 350px;
+                        min-width: 320px;
+                    }
+                    span{
+                        display: none;
+                    }
+                }
+        }
+        .full-info{
+            @include flex-2-center;
+            flex-direction: column;
+            gap: 15px;
+            padding: 10px 25px;
+            .box-costa{
+                width: 365px;
+                display: flex;
+                gap: 10px;
+                .info2 {
+                    h4{
+                        max-width: 230px;
+                        color: var(--font-color);
+                    }
+                    p{
+                        color: var(--font-color-dark-gray);
+                    }
+                }
+            }
+        }
+    }
+}

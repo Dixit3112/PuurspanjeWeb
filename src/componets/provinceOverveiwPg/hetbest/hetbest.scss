@@ -1,0 +1,107 @@
+@import "../../../scss/global.scss";
+
+.hetBest{
+    padding: 80px 0px;
+    display: grid;
+    justify-content: center;
+    gap: 80px;
+    .info-het{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            h2{
+                @include font-32;
+            }
+            p{
+                max-width: 734px;
+                @include font-16;
+            }
+    }
+    .center-img{
+        display: grid;
+        justify-content: center;
+        .imgHet{
+            width: 100%;
+            display: grid;
+            gap: 17px;
+            max-width: 754px;
+            .first{
+                img{
+                    width: 754px;
+                    height: 340px;
+                }
+            }
+            .imgs{
+                display: flex;
+                gap: 20px;
+                img{
+                    height: 282px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .hetBest{
+        padding: 40px 10px;
+        display: grid;
+        gap: 50px;
+        .info-het{
+            padding: 10px 30px;
+        }
+        .center-img{
+            max-width: 768px;
+            padding: 20px 0;
+            .imgHet{
+                .first{
+                    display: flex;
+                    justify-content: center;
+                    img{
+                        width: 703px;
+                        height: 300px;
+                    }
+                }
+                .imgs{
+                    justify-content: center;
+                    img{
+                        width: 341px;
+                        height: 300px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .hetBest{
+        padding: 30px 10px;
+        display: grid;
+        gap: 50px;
+        .info-het{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            h2{
+                @include font-24;
+            }
+        }
+        .center-img{
+            padding: 20px 0;
+            max-width: 576px;
+            .imgHet{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                overflow-x: scroll;
+                max-width: 550px;
+                .first, .imgs{
+                    img{
+                        object-fit: cover;
+                        width: 300px !important;
+                        height: 200px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+@import "../../../scss/global.scss";
+
+.costa-colida{
+    background-color: #000;
+    color: var(--font-color);
+    .costa-info{
+        padding: 50px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        h3{
+            @include font-32;
+            width: 450px;
+            color: var(--font-color);
+        }
+    }
+    .costa-colida-main{
+        width: 100%;
+        .infoPlace-flex {
+          max-width: 100%;
+          display: flex;
+          gap: 20px;
+
+          .placeName {
+            align-items: center;
+            h4 {
+              @include font-18;
+              font-weight: 500;
+              padding: 0 0 10px 0;
+            }
+            p {
+              @include font-16;
+              max-width: 550px;
+            }
+          }
+        }
+    }
+    .costa-blanca{
+        @include font-16;
+        padding: 50px 0;
+    }
+}
+@media (max-width: 576px) {
+    .costa-colida{
+        .costa-colida-main{
+            .infoPlace-flex{
+                max-width: 550px;
+                overflow-x: auto;
+                .placeName{
+                    min-width: 450px;
+                    overflow-x: auto;
+                    gap: 20px;
+                    h4{
+                        max-width: 350px;
+                    }
+                    p{
+                        max-width: 400px;
+                    }
+                }
+            }
+        }
+    }
+}

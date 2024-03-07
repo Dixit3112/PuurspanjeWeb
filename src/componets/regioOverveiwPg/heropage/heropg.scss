@@ -1,0 +1,94 @@
+@import "../../../scss/global.scss";
+
+.hero-regio{
+    display: flex;
+    flex-direction: column;
+    padding: 80px 0;
+    .info-regio-overVu{
+        padding: 40px 0;
+        @include flex-bet-center;
+        gap: 10px;
+        h3{
+            @include font-48;
+        }
+        p{
+            max-width: 600px;
+        }
+    }
+    .img-regioVu{
+        display: flex;
+        // justify-content: center;
+        gap: 20px;
+        border-bottom: 1px solid var(--color-border-gray);
+        .seaPath{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 367px;
+            img{
+                width: 367px;
+                height: 400px;
+            }
+            h5{
+                @include font-20;
+                font-weight: 500;
+                color: var(--color-black);
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .hero-regio{
+        padding: 40px 0px;
+        .info-regio-overVu{
+            @include flex-2-center;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px 0;
+            h3{
+                width: 100%;
+                @include font-24;
+            }
+            p{
+                max-width: 340px;
+            }
+        }
+        .img-regioVu{
+            @include flex-2-center;
+            flex-direction: column;
+            .seaPath{
+                img{
+                    width: 367px;
+                    height: 300px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .hero-regio{
+        padding: 90px 10px;
+        gap: 40px;
+        .info-regio-overVu{
+            display: flex;
+            justify-content: space-between;
+            h3{
+                max-width: 340px;
+            }
+            p{
+                max-width: 400px;
+            }
+        }
+        .img-regioVu{
+            display: flex;
+            .seaPath{
+                max-width: 303px;
+                img{
+                    width: 303px;
+                    height: 400px;
+                }
+            }
+        }
+    }
+}

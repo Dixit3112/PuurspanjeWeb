@@ -1,0 +1,68 @@
+@import "../../../scss/global.scss";
+
+.vetalbjar{
+    padding: 50px 0;
+    @include flex-2-center;
+    gap: 20px;
+    height: 478px;
+    .info-vetaal{
+        @include flex-2-center;
+        flex-direction: column;
+        gap: 30px;
+        h3{
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            @include font-24;
+        }
+        .info{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            p{
+                max-width: 560px;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .vetalbjar{
+        .info-vetaal{
+            .info{
+                p{
+                    max-width: 600px;
+                }
+            }
+        }
+        .img-vetaal{
+            img{
+                width: 450px !important;
+                height: 478px;
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .vetalbjar{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 60px;
+        height: fit-content;
+        .info-vetaal{
+            padding: 0 50px;
+            h3{
+                @include font-20;
+            }
+            p{
+                max-width: 450px;
+            }
+        }
+        .img-vetaal{
+            @include flex-2-center;
+            img{
+                width: 435px !important;
+                height: 200px !important;
+            }
+        }
+    }
+}

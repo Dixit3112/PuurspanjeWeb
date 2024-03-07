@@ -1,0 +1,49 @@
+@import "../../../scss/global.scss";
+
+.regio-place-cards{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    padding: 20px 0px;
+    .Heading{
+        padding: 0 10px ;
+    }
+    .place-price{
+        @include flex-bet-center;
+        gap: 20px;
+        .cards{
+            display: flex;
+            flex-direction: column;
+            h3{
+                @include font-16;
+                font-weight: 500;
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .regio-place-cards{
+        gap: 20px;
+        .place-price{
+            padding: 10px;
+            gap: 5px;
+        }
+    }
+}
+@media (max-width: 576px) {
+    .regio-place-cards{
+        min-width: 200px;
+        max-width: 560px;
+        .place-price{
+            overflow-x: auto;
+            .cards{
+                img{
+                    width: 250px;
+                }
+            }
+        }
+    }
+}

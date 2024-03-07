@@ -1,0 +1,33 @@
+@import "../../../scss/global.scss";
+
+.colida-info{
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    h3{
+        @include font-32;
+    }
+    p{
+        @include font-18;
+        max-width: 560px;
+    }
+}
+@media (max-width: 768px) {
+    .colida-info{
+        padding: 40px 20px;
+        p{
+            max-width: 460px;
+        }
+    }
+}
+@media (max-width: 576px) {
+    .colida-info{
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        p{
+            max-width: 460px;
+        }
+    }   
+}

@@ -1,0 +1,91 @@
+@import "../../../scss/global.scss";
+
+.droom-spanje-info{
+    padding: 50px 60px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1280px;
+    gap: 30px;
+    .info-box{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        h3{
+            @include font-32;
+        }
+        p{
+            @include font-18;
+            max-width: 560px;
+        }
+        .head-info, .droom{
+            display: grid;
+            gap: 20px;
+        }
+    }
+    .information-droom-spanje{
+        max-width: 1280px;
+        .droom-info{
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            .info-Droom-spanje{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                p{
+                    max-width: 560px;
+                    @include font-18;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .droom-spanje-info{
+        padding: 20px;
+        .info-box{
+            max-width: 576px;
+            display: grid;
+            h3{
+                @include font-24;
+            }
+        }
+        .information-droom-spanje{
+            max-width: 570px;
+            overflow-x: scroll;
+            .droom-info{
+                width: 800px;
+                gap: 50px;
+                .info-Droom-spanje{
+                    max-width: 350px;
+                    h3{
+                        @include font-16;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .droom-spanje-info{
+        padding: 10px;
+        .info-box{
+            max-width: 576px;
+            display: grid;
+            h3{
+                @include font-24;
+            }
+        }
+        .information-droom-spanje{
+            .droom-info{
+                width: 760px;
+                .info-Droom-spanje{
+                    padding: 0 5px;
+                    gap: 20px;
+                    width: 350px;
+                }
+            }
+        }
+    }
+}

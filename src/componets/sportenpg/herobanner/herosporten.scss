@@ -1,0 +1,119 @@
+@import "../../../scss/global.scss";
+
+.infoLine{
+    padding: 20px 0;
+    width: 100%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom:  1px solid var(--color-border-gray);
+}
+.infoSport{
+    padding: 50px 0;
+    @include flex-bet-center;
+    border-bottom: 1px solid var(--color-border-gray);
+    h1{
+        max-width: 560px;
+        @include font-48;
+    }
+    p{
+        max-width: 560px;
+        @include font-18;
+    }
+}
+.hero-sport{
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .sport-info{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .place-price{
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            .cards{
+                max-width: 367px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                h3{
+                    @include font-16;
+                    font-weight: 500;
+                }
+                img{
+                    width: 367px;
+                    height: 385px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .infoLine{
+        p{
+            padding: 0 20px;
+        }
+    }
+    .hero-sport{
+        padding: 50px 0;
+        .sport-info{
+            gap: 20px;
+            .place-price{
+                padding: 10px;
+                gap: 5px;
+                .cards{
+                    max-width: 270px;
+                    img{
+                        width: 250px !important;
+                        height: 350px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .infoLine{    
+        p{
+            padding: 0 20px;
+        }
+    }
+    .infoSport{
+        flex-direction: column;
+        gap: 20px;
+        h1{
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            @include font-24;
+        }
+        // p{
+        //     max-width: 400px;
+        // }
+    }
+    .hero-sport{
+        padding: 50px 0;
+        .sport-info{
+            flex-direction: row;
+            min-width: 200px;
+            max-width: 560px;
+            overflow-x: auto;
+            gap: 10px;
+            .place-price{
+                padding: 0 5px;
+                gap: 10px;
+                .cards{
+                    img{
+                        width: 240px !important;
+                        height: 200px;
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,58 @@
+@import "../../../scss/global.scss";
+
+.wonen-murcia-info{
+    margin: 0 auto;
+    padding: 50px 0;
+    display: grid;
+    gap: 30px;
+    max-width: 754px;
+    align-items: center;
+    justify-content: center;
+    h3{
+        @include font-24;
+    }
+    p{
+        max-width: 625px;
+        @include font-16;
+        a{
+            text-decoration: none;
+            color: var(--anchor-font-color);
+        }
+    }
+    img{
+        width: 754px;
+        height: 400px;
+    }
+}
+@media (max-width: 768px) {
+    .wonen-murcia-info{
+        display: grid;
+        gap: 20px;
+        width: 100%;
+        h3{}
+        img{
+            height: 400px;
+        }
+    }
+}
+@media (max-width: 576px) {
+    .wonen-murcia-info{
+        gap: 20px;
+        @include flex-2-center;
+        flex-direction: column;
+        h3{
+            width: 100%;
+            margin: 0 0 0 10px;
+            display: flex;
+            justify-content: flex-start;
+            @include font-20;
+        }
+        p{
+            max-width: 560px;
+        }
+        img{
+            width: 560px;
+            height: 180px;
+        }
+    }
+}

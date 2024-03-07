@@ -1,0 +1,151 @@
+@import "../../../scss/global.scss";
+
+.anderePlaatsen{
+    .placeInfo {
+        max-width: 1280px;
+        padding: 30px 60px;
+        display: grid;
+        gap: 10px;
+        h3 {
+            @include font-24;
+            font-weight: 700;
+        }
+        p {
+            @include font-18;
+            font-weight: 400;
+        }
+        .cards {
+            display: flex;
+            gap: 20px;
+            .infoPlace-flex {
+                .place {
+                    max-width: 100%;
+                    padding: 20px 0 10px 0;
+                    border-bottom: 1px solid var(--color-border-gray);
+                    .flex-mid {
+                        display: flex;
+                        gap: 20px;
+                        align-items: center;
+                        img {
+                            width: 160px;
+                            height: 120px;
+                        }
+                        span {
+                            display: block;
+                            @include font-16;
+                            font-weight: 500;
+                            padding-bottom: 10px;
+                        }
+                        p {
+                            @include font-16;
+                            max-width: 350px;
+                        }
+                    }
+                }
+                .place:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .anderePlaatsen{
+        .placeInfo {
+            padding: 20px 0px;
+            gap: 15px;
+            .cards {
+                padding: 20px;
+                .infoPlace-flex {
+                    .place {
+                        max-width: 100%;
+                        padding-top: 20px;
+                        padding-bottom: 10px;
+                        border-bottom: 1px solid var(--color-border-gray);
+
+                        .flex-mid {
+                            display: flex;
+                            gap: 20px;
+                            align-items: center;
+                            span {
+                                display: block;
+                                @include font-16;
+                                font-weight: 500;
+                                padding-bottom: 10px;
+                            }
+
+                            p {
+                                @include font-16;
+                                max-width: 350px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .anderePlaatsen{
+        .placeInfo {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 550px;
+
+            h3 {
+                padding: 0 0 0 20px;
+                @include font-20;
+                font-weight: 600;
+            }
+
+            p {
+                padding: 0 0 0 20px;
+                @include font-16;
+            }
+
+            .cards {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                max-width: 570px;
+                .infoPlace-flex {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 20px;
+                    .place {
+                        border-bottom: 1px solid var(--color-border-gray);
+
+                        .flex-mid {
+                            display: flex;
+                            gap: 20px;
+                            align-items: center;
+                            img {
+                                width: 140px !important;
+                                height: 100px;
+                            }
+                            span {
+                                display: block;
+                                @include font-16;
+                                font-weight: 500;
+                                padding: 0 0 3px 0;
+                            }
+                            p {
+                                @include font-16;
+                                line-height: 16px;
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                }
+                .infoPlace-flex:first-child{
+                    .place:last-child{
+                        border-bottom: 1px solid var(--color-border-gray);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+@import "../../../scss/global.scss";
+
+.places-prices{
+    padding: 50px 0;
+    h2{
+        max-width: 560px;
+        padding: 20px 0 20px 68px;
+        @include font-24;
+    }
+    .center-place-img{
+        display: grid;
+        gap: 20px;
+        .name-place-cards{
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        .place-price{
+            @include flex-2-center;
+            gap: 20px;
+            .cards{
+                display: flex;
+                flex-direction: column;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    }
+}
+@media (max-width: 768px) {
+    .places-prices{
+        h2{
+            padding: 0 0 0 5px;
+            @include font-24;
+        }
+        .center-place-img{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            .name-place-cards{
+                gap: 20px;
+                .place-price{
+                    padding: 5px;
+                    gap: 5px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .places-prices{
+        h2{
+            @include font-20;
+            font-weight: 600;
+            padding: 0;
+        }
+        .center-place-img{
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+            flex-direction: row;
+            max-width: 560px;
+            overflow-x: auto;
+            .name-place-cards{
+                .place-price{
+                    display: flex;
+                    gap: 10px;
+                    .cards{
+                        img{
+                            width: 250px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

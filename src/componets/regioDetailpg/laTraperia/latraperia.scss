@@ -1,0 +1,88 @@
+@import "../../../scss/global.scss";
+
+.laTraperia{
+    padding: 50px 0;
+    display: grid;
+    justify-content: center;
+    gap: 80px;
+    .info-latraperia{
+        width: 755px;
+        .info{
+            width: 660px;
+            display: grid;
+            gap: 20px;
+        }
+    }
+    .imgs{
+        @include flex-2-center;
+        .slide-img{
+
+            .box1{
+                display: flex;
+                gap: 20px;
+                img:first-child{
+                    width: 465px;
+                    height: 400px;
+                }
+                img:last-child{
+                    width: 270px;
+                    height: 400px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .laTraperia{
+        .info-latraperia{
+            width: 750px;
+            .info{
+                p{
+                    width: 703px;
+                }
+            }
+        }
+        .imgs{
+            padding: 20px;
+            .slide-img{
+                gap: 10px;
+                .box1{
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .laTraperia{
+        .info-latraperia{
+            max-width: 576px;
+            .info{
+                max-width: 560px;
+                gap: 10px;
+                padding: 10px;
+                p{
+                    max-width: 560px;
+                }
+            }
+        }
+        .imgs{
+            overflow-x: auto;
+            max-width: 560px;
+            .slide-img{
+                width: 100%;
+                padding: 20px;
+                .box1{
+                    display: flex;
+                    gap: 20px;
+                    img{
+                        padding: 0 5px;
+                        width: 400px !important;
+                        height: 250px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+

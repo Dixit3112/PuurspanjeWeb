@@ -1,0 +1,76 @@
+@import "../../../scss/global.scss";
+
+.hetTeam-info{
+    @include flex-2-center;
+    flex-direction: column;
+    .infoTeam{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 754px;
+        h2{
+            @include font-32;
+        }
+        p{}
+        a{
+            text-decoration: none;
+            color: var(--anchor-font-color);
+        }
+    }
+    .img-team{
+        padding: 50px 0;
+        .team-img{
+            .work-img{
+                display: flex;
+                gap: 20px;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .hetTeam-info{
+        .infoTeam{
+            max-width: 700px;
+        }
+        .img-team{
+            padding: 30px 0;
+            max-width: 700px;
+            .team-img{
+                .work-img{
+                    gap: 10px;
+                    .img1{
+                        img{
+                            width: 413px;
+                            height: 400px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px) {    
+    .hetTeam-info{
+        .infoTeam{
+            padding: 30px 0;
+            max-width: 550px;
+        }
+        .img-team{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            .team-img{
+                max-width: 540px;
+                overflow-x: auto;
+                .work-img{ 
+                    .img1, .img2{
+                        img{
+                            width: 300px;
+                            height: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

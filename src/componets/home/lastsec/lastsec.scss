@@ -1,0 +1,78 @@
+@import "../../../scss/global.scss";
+
+.lastsec{
+    .main-lastSec{
+        position: relative;
+        height: 400px;
+        img{
+            width: 100%;
+            object-fit: cover;
+            height: 400px;
+        }
+        .main-spanjeInfo{
+            width: 100%;
+            position: absolute;
+            @include flex-2-center;
+            gap: 40px;
+            flex-direction: column;
+            top: 45%;
+            color: var(--font-color);
+            .main-faqs{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+                h4{
+                    @include font-32;
+                    color: var(--font-color);
+                }
+            }
+            .button{
+                @include flex-2-center;
+                .blue{
+                    width: 315px;
+                    @include font-16;
+                    font-weight: 600;
+                    padding: 12px 24px;
+                    background-color: #fff;
+                    border: none;
+                    border-radius: 3px;
+                    color: var(--color-black);
+                }
+            }
+        }
+    }
+    @media (max-width: 576px) {
+        max-width: 576px;
+        img{
+            width: 100%;
+        }
+        .main-lastSec{
+            width: 100%;
+            .main-spanjeInfo{
+                top: 10%;
+                width: 100%;
+                .main-faqs{
+                    max-width: 450px;
+                    @include flex-2-center;
+                }
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        max-width: 100%;
+        img{
+            width: 100%;
+        }
+        .main-lastSec{
+            width: 100%;
+            .main-spanjeInfo{
+                top: 23%;
+                width: 100%;
+                .main-faqs{
+                    @include flex-2-center;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,92 @@
+@import "../../../scss/global.scss";
+
+.anjaniSec{
+    padding: 60px 0;
+    display: flex;
+    gap: 100px;
+    .anjaKris-info{
+        @include flex-2-center;
+        gap: 10px;
+        .img-flex-sm{
+            @include flex-2-center;
+            gap: 3px;
+        }
+    }
+    .center-info{
+        @include flex-2-center;
+        width: 50%;
+        .anja-info{
+            h2{
+                padding: 0 0 50px 0;
+            }
+            p{
+                max-width: 460px;
+            }
+            .info{
+                @include font-16;
+                padding: 50px 0;
+                color: var(--font-gray)
+            }
+            a{
+                text-decoration: none;
+                color: #1678c0;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .anjaniSec{
+        max-width: 768px;
+        display: flex;
+        gap: 120px;
+        .anjaKris-info{
+            max-width: 768px;
+            width: 60%;
+        }
+        .center-info{
+            width: 40%;
+            p{
+                @include font-16;
+                width: 200px;
+            }
+            .anja-info{
+                h2{
+                    padding: 0 0 10px 0;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .anjaniSec{
+        max-width: 576px;
+        display: grid;
+        gap: 60px;
+        .anjaKris-info{
+            max-width: 576px;
+            width: 100%;
+            .img-flex-sm{
+                max-width: 576px;
+                overflow-x: auto;
+                .anja:nth-child(1){
+                    order: 3;
+                    object-fit: cover;
+                }
+                .anja:nth-child(3){
+                    place-items: center;
+                    order: 2;
+                }
+            }
+        }
+        .center-info{
+            max-width: 576px;
+            width: 100%;
+            padding: 0 0 10px 0;
+            border-bottom: 1px solid var(--color-border-gray);
+            p{
+                @include font-16;
+                width: 350px;
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+@import "../../../scss/global.scss";
+
+.vanPuur {
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 500px;
+    }
+
+    .team-spanje {
+        padding: 50px;
+        display: flex;
+        justify-content: space-between;
+
+        .heading {
+            min-width: 400px;
+            h2 {
+                @include font-32;
+            }
+        }
+
+        .info-vanTeam {
+            width: 50%;
+            height: 150px;
+            display: grid;
+            gap: 50px;
+
+            p {
+                @include font-16;
+            }
+
+            a {
+                height: 20px;
+                text-decoration: none;
+                color: var(--anchor-font-color);
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        img {
+            width: 100%;
+        }
+
+        .team-spanje {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            .heading {
+                h2 {
+                    @include font-24;
+                }
+            }
+
+            .info-vanTeam {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,67 @@
+@import "../../../scss/global.scss";
+
+.best-imgInfo{
+
+    .info-best{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        h3{
+            @include  font-32;
+            font-weight: 600;
+            width: 560px;
+        }
+        .mainInfo{
+            display: grid;
+            gap: 20px;
+            // max-width: 560px;
+            p{
+                max-width: 540px;
+            }
+            h5{
+                @include font-18;
+                font-weight: 600;
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .best-imgInfo{
+        padding: 0 10px 50px 10px;
+        .info-best{
+            display: flex;
+            flex-direction: column;
+            .mainInfo{
+            display: grid;
+            gap: 20px;
+            max-width: 560px;
+            p{
+                max-width: 450px;
+            }
+            h5{
+                @include font-18;
+                font-weight: 600;
+            }
+        }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .best-imgInfo{
+        padding: 0 10px 50px 10px;
+        .info-best{
+            .mainInfo{
+            display: grid;
+            gap: 20px;
+            max-width: 768px;
+            p{
+                max-width: 470px;
+            }
+            h5{
+                @include font-18;
+                font-weight: 600;
+            }
+        }
+        }
+    }
+}

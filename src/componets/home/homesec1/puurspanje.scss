@@ -1,0 +1,117 @@
+@import "../../../scss/global.scss";
+.daarom_icon {
+  padding: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  .daarom_icon_div {
+    margin: 30px 0;
+    border-radius: 5px;
+    display: flex;
+    padding: 15px 20px;
+    gap: 60px;
+    border: 1px solid rgb(208, 208, 208);
+    align-items: center;
+    img {
+      width: 32px;
+      height: 32px;
+    }
+    i{
+      color: #00f;
+      font-size: 32px;
+    }
+  }
+}
+.daarom_cont {
+  background-color: var(--background-color-gray);
+  .daarom_header {
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    h2 {
+      width: 50%;
+      @include font-32;
+    }
+    p {
+      color: gray;
+      width: 50%;
+      font-size: 16px;
+    }
+  }
+  .daarom_cards {
+    padding: 0 100px 100px;
+    display: flex;
+    gap: 10px;
+    .daarom_card {
+      padding: 20px;
+      background-color: white;
+      width: 25%;
+      color: var(--color-black);
+      border: 1px solid var(--color-border-gray);
+      padding: 30px 30px 60px 30px;
+      img {
+        width: 24px;
+        height: 24px;
+        margin-bottom: 10px;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .daarom_icon {
+    .daarom_icon_div {
+      padding: 10px;
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+  .daarom_cont {
+    .daarom_header {
+      padding: 75px 10px;
+    }
+    .daarom_cards {
+      padding: 0 10px 50px;
+      .daarom_card {
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .daarom_icon {
+    flex-direction: column;
+    width: 90%;
+    .daarom_icon_div {
+      justify-content: space-between;
+      padding: 10px;
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+  .daarom_cont {
+    .daarom_header {
+      padding: 35px 10px;
+      display: block;
+      h2 {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      p {
+        width: 100%;
+      }
+    }
+    .daarom_cards {
+      overflow-x: auto;
+      .daarom_card {
+        min-width: 200px;
+      }
+    }
+  }
+}
