@@ -29,15 +29,16 @@ export default function Contact() {
                 ES-B30806699
               </a>
             </div>
-            // <iframe
-            //   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17213.992936496972!2d-0.8492928194487547!3d37.80189298938653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd631679188db771%3A0x36c9fb590d4968d2!2spuurspanje!5e0!3m2!1sen!2sin!4v1699692192385!5m2!1sen!2sin"
-            //   width="500"
-            //   height="400"
-            //   style={{ border: 0 }}
-            //   allowfullscreen=""
-            //   loading="lazy"
-            //   referrerpolicy="no-referrer-when-downgrade"
-            // ></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17213.992936496972!2d-0.8492928194487547!3d37.80189298938653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd631679188db771%3A0x36c9fb590d4968d2!2spuurspanje!5e0!3m2!1sen!2sin!4v1699692192385!5m2!1sen!2sin"
+              width="500"
+              height="400"
+              style={{ border: 0 }}
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="purspanjeDixit"
+            ></iframe>
           </div>
           <div className="book-card">
             <div className="info-card">
